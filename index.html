@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ice Dream 🍦</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background: linear-gradient(135deg,#fff0f6,#ffe8cc,#ffd6e7);
+      overflow-x:hidden;
+      color:#4b2e2e;
+    }
+
+    header{
+      width:100%;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:60px 10%;
+      position:relative;
+    }
+
+    .content{
+      max-width:550px;
+      z-index:2;
+    }
+
+    .content h1{
+      font-size:70px;
+      line-height:1.1;
+      margin-bottom:20px;
+      color:#ff4d8d;
+      text-shadow:0 5px 15px rgba(255,77,141,0.3);
+    }
+
+    .content p{
+      font-size:18px;
+      margin-bottom:30px;
+      color:#6b4b4b;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:16px 35px;
+      background:linear-gradient(45deg,#ff4d8d,#ff9f43);
+      color:white;
+      text-decoration:none;
+      border-radius:50px;
+      font-weight:600;
+      font-size:18px;
+      box-shadow:0 10px 25px rgba(255,77,141,0.4);
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      transform:translateY(-5px) scale(1.05);
+      box-shadow:0 15px 35px rgba(255,77,141,0.5);
+    }
+
+    .hero-image{
+      position:relative;
+      z-index:2;
+    }
+
+    .hero-image img{
+      width:500px;
+      animation:float 4s ease-in-out infinite;
+      filter:drop-shadow(0 20px 40px rgba(0,0,0,0.2));
+    }
+
+    @keyframes float{
+      0%,100%{
+        transform:translateY(0);
+      }
+      50%{
+        transform:translateY(-20px);
+      }
+    }
+
+    .circle{
+      position:absolute;
+      width:700px;
+      height:700px;
+      background:radial-gradient(circle,#ffb3d9,#ff8fab);
+      border-radius:50%;
+      right:-200px;
+      top:-150px;
+      z-index:1;
+      opacity:0.4;
+      filter:blur(20px);
+    }
+
+    section{
+      padding:100px 10%;
+    }
+
+    .title{
+      text-align:center;
+      font-size:50px;
+      margin-bottom:70px;
+      color:#ff4d8d;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:35px;
+    }
+
+    .card{
+      background:white;
+      border-radius:30px;
+      overflow:hidden;
+      box-shadow:0 15px 35px rgba(0,0,0,0.08);
+      transition:0.4s;
+    }
+
+    .card:hover{
+      transform:translateY(-12px);
+    }
+
+    .card img{
+      width:100%;
+      height:260px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:25px;
+      text-align:center;
+    }
+
+    .card-content h3{
+      font-size:28px;
+      margin-bottom:10px;
+      color:#ff4d8d;
+    }
+
+    .card-content p{
+      color:#666;
+      margin-bottom:20px;
+    }
+
+    .price{
+      font-size:28px;
+      font-weight:700;
+      color:#ff9f43;
+    }
+
+    footer{
+      padding:40px;
+      text-align:center;
+      background:#ff4d8d;
+      color:white;
+      margin-top:80px;
+      font-size:18px;
+    }
+
+    @media(max-width:900px){
+
+      header{
+        flex-direction:column;
+        text-align:center;
+        padding-top:120px;
+      }
+
+      .content h1{
+        font-size:52px;
+      }
+
+      .hero-image img{
+        width:350px;
+        margin-top:40px;
+      }
+
+      .circle{
+        width:500px;
+        height:500px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="circle"></div>
+
+  <header>
+    <div class="content">
+      <h1>Самое вкусное мороженое 🍦</h1>
+      <p>
+        Нежное, сладкое и невероятно аппетитное мороженое
+        с натуральными вкусами клубники, шоколада и ванили.
+      </p>
+
+      <a href="#" class="btn">Попробовать</a>
+    </div>
+
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=1200&auto=format&fit=crop" alt="Мороженое">
+    </div>
+  </header>
+
+  <section>
+    <h2 class="title">Популярные вкусы</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?q=80&w=1200&auto=format&fit=crop">
+        <div class="card-content">
+          <h3>Клубничное</h3>
+          <p>Свежая клубника и сливочный вкус.</p>
+          <div class="price">120 сом</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1629385701021-fcd568a74327?q=80&w=1200&auto=format&fit=crop">
+        <div class="card-content">
+          <h3>Шоколадное</h3>
+          <p>Насыщенный шоколад для сладкоежек.</p>
+          <div class="price">140 сом</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1488900128323-21503983a07e?q=80&w=1200&auto=format&fit=crop">
+        <div class="card-content">
+          <h3>Ванильное</h3>
+          <p>Классический нежный сливочный вкус.</p>
+          <div class="price">110 сом</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    Ice Dream © 2026 | Сделано с любовью 🍨
+  </footer>
+
+</body>
+</html>
